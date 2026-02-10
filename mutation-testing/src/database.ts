@@ -1,8 +1,13 @@
 import { Pool } from 'pg';
 
+const host = process.env.DB_HOST || 'localhost';
+if (!host) {
+  throw new Error('Database host is required');
+}
+
 const pool = new Pool({
     user: 'user',
-    host: 'localhost',
+    host,
     database: 'comments_db',
     password: 'password',
     port: 5432,

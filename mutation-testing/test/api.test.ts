@@ -5,6 +5,7 @@ import { closeDb, initDb, query } from '../src/database';
 describe('Comments API', () => {
     beforeAll(async () => {
         // Ensure DB is ready and clean
+        await query('DROP TABLE IF EXISTS comments');
         await initDb();
         await query('DELETE FROM comments');
     });
@@ -21,6 +22,15 @@ describe('Comments API', () => {
         expect(res.status).toBe(201);
         expect(res.body.content).toBe('Hello World');
         expect(res.body.id).toBeDefined();
+    });
+
+    it('should return 400 if content is missing', async () => {
+        const res = await request(app)
+            .post('/api/comments')
+            .send({});
+
+        expect(res.status).toBe(400);
+        expect(res.body.error).toBe('Content is required');
     });
 
     it('should fetch comments tree', async () => {
