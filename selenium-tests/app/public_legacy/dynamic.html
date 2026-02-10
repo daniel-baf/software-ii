@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contenido dinámico</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="dynamic">
+    <header>
+      <h1>Contenido dinámico</h1>
+      <a href="/">Inicio</a>
+    </header>
+
+    <section class="card stack">
+      <div class="row">
+        <button class="btn" id="load-data">Cargar contenido</button>
+        <span class="badge" id="dynamic-badge">Idle</span>
+      </div>
+      <p id="dynamic-output" class="notice">Sin datos</p>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

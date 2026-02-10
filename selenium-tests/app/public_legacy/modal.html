@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal - Demo Selenium</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="modal">
+    <header>
+      <h1>Modal</h1>
+      <a href="/">Inicio</a>
+    </header>
+
+    <section class="card stack">
+      <button class="btn" id="open-modal">Abrir modal</button>
+    </section>
+
+    <div id="modal-backdrop" class="modal-backdrop hidden">
+      <div class="modal stack">
+        <h2>Modal de prueba</h2>
+        <p>Elemento modal para validar waits y acciones.</p>
+        <button class="btn" id="close-modal">Cerrar</button>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla - Demo Selenium</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="table">
+    <header>
+      <h1>Tabla con filtros</h1>
+      <a href="/">Inicio</a>
+    </header>
+
+    <section class="card stack">
+      <label>
+        Filtro por texto
+        <input class="input" id="filter-input" placeholder="Buscar..." />
+      </label>
+      <button class="btn" id="sort-name">Ordenar por nombre</button>
+      <table class="table" id="products-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mouse</td>
+            <td>$12</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Teclado</td>
+            <td>$35</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Monitor</td>
+            <td>$199</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Audífonos</td>
+            <td>$49</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script src="/app.js"></script>
+  </body>
+</html>

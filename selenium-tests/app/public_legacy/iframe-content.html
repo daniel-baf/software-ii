@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFrame Content</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("iframe-btn");
+        const output = document.getElementById("iframe-output");
+        button.addEventListener("click", () => {
+          output.textContent = "Click dentro del iframe";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section class="card stack">
+      <p>Contenido interno.</p>
+      <button class="btn" id="iframe-btn">Click en iframe</button>
+      <p id="iframe-output" class="notice">Sin acciones</p>
+    </section>
+  </body>
+</html>

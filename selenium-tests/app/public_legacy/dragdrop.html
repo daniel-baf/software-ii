@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop - Demo Selenium</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="dragdrop">
+    <header>
+      <h1>Drag & Drop</h1>
+      <a href="/">Inicio</a>
+    </header>
+
+    <section class="card stack">
+      <div class="row">
+        <span id="drag-item" class="draggable" draggable="true">Arrástrame</span>
+      </div>
+      <div id="drop-zone" class="drop-zone">Suelta aquí</div>
+      <p id="drop-status" class="notice">Pendiente</p>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

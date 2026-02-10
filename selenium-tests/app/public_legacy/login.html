@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Demo Selenium</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="login">
+    <header>
+      <h1>Login</h1>
+      <a href="/">Inicio</a>
+    </header>
+
+    <section class="card stack">
+      <p>Credenciales de demo: <strong>demo / demo</strong></p>
+      <p id="login-message" class="notice hidden"></p>
+      <form class="stack" method="POST" action="/login">
+        <label>
+          Usuario
+          <input class="input" name="username" id="username" />
+        </label>
+        <label>
+          Password
+          <input class="input" type="password" name="password" id="password" />
+        </label>
+        <button class="btn" type="submit" id="login-submit">Entrar</button>
+      </form>
+    </section>
+    <script src="/app.js"></script>
+  </body>
+</html>
