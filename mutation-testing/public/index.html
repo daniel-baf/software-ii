@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios Anidados (Mutation Demo)</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .comment { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .replies { margin-left: 20px; border-left: 2px solid #eee; padding-left: 10px; }
+        form { margin-top: 10px; }
+        input[type="text"] { width: 70%; padding: 5px; }
+        button { padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Comentarios</h1>
+    
+    <div id="comment-form-container">
+        <h3>Nuevo Comentario</h3>
+        <form onsubmit="postComment(event)">
+            <input type="text" id="content" placeholder="Escribe un comentario..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="comments-list">
+        <!-- Comments will be loaded here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
