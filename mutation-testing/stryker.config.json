@@ -6,6 +6,10 @@
         "!src/types.ts",
         "!src/**/*.test.ts"
     ],
+    "ignorePatterns": [
+        "import",
+        "export"
+    ],
     "testRunner": "jest",
     "jest": {
         "projectType": "custom",

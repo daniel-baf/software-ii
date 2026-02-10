@@ -15,8 +15,16 @@ jest.mock('../src/database', () => {
 });
 
 describe('API Error Handling', () => {
+    let consoleErrorSpy: jest.SpyInstance;
+
     beforeEach(() => {
         jest.clearAllMocks();
+        // Silence console.error during these tests (the app logs the expected DB errors)
+        consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+        consoleErrorSpy?.mockRestore();
     });
 
     it('should return 500 when database query fails during GET /comments', async () => {
